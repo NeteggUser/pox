@@ -107,7 +107,7 @@ def Test1():
 		print "Test 1 Failed"
  
     net.stop()	
-    #print "Test 1 ends here-------------------------------------------------"
+    print "-------------------------------------------------"
 	
 def Test2():
     print "Beginning Test 2: Testing whether UDP packets from Internet get dropped"
@@ -148,6 +148,7 @@ def Test2():
             print "Test 2 Passed"
  
     net.stop()	
+    print "-------------------------------------------------"
 
 	
 def Test3():
@@ -201,7 +202,7 @@ def Test3():
 		else:
 			print "Test 3 Failed"
 
-    #print "------------------------------------------------------"
+    print "------------------------------------------------------"
     net.stop()
 
 
@@ -265,6 +266,7 @@ def Test4():
 		print "Test 4 failed"
 
     #print "Test 4 ends here----------------------------------------------------"
+    print "------------------------------------------------------"
     net.stop()
 	
 
@@ -306,6 +308,7 @@ def Test5():
     else:
         print "Test 5 Failed"
     net.stop()
+    print "------------------------------------------------------"
 
 
 	
