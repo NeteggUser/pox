@@ -30,7 +30,7 @@ class MyTopo(Topo):
         self.addLink( rightHost, switch )
 
 def Test1():
-    print "Beginning Test 1: UDP packet from CS can go through"
+    print "Beginning Test 1: Testing whether UDP packet from CS can go through"
     topo = MyTopo(2)
     net = Mininet(topo, controller=RemoteController)
 
@@ -110,7 +110,7 @@ def Test1():
     #print "Test 1 ends here-------------------------------------------------"
 	
 def Test2():
-    print "Beginning Test 2: UDP packets from Internet get dropped"
+    print "Beginning Test 2: Testing whether UDP packets from Internet get dropped"
     topo = MyTopo(2)
     net = Mininet(topo, controller=RemoteController)
 
@@ -151,7 +151,7 @@ def Test2():
 
 	
 def Test3():
-    print "Beginning Test 3: TCP traffic initiated from Internet should be dropped"    
+    print "Beginning Test 3: Testing whether TCP traffic initiated from Internet gets dropped"    
     topo = MyTopo(2)
     net = Mininet(topo, controller=RemoteController)
 
@@ -229,7 +229,7 @@ def parse_iperf( iperfOutput ):
 		return "false"
 
 def Test4():
-    print "Beginning Test 4: TCP connection initiated from CS can go through"
+    print "Beginning Test 4: Testing whether TCP connection initiated from CS can go through"
     topo = MyTopo(2)
     net = Mininet(topo, controller=RemoteController)
 
@@ -271,7 +271,7 @@ def Test4():
 # Check UDP from the internal is allowed
 
 def Test5():
-    print "Beginning Test 5: SSH packets from Internet get dropped"
+    print "Beginning Test 5: Testing whether SSH packets from Internet get dropped"
     topo = MyTopo(2)
     net = Mininet(topo, controller=RemoteController)
     #, controller=RemoteController)
