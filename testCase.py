@@ -132,6 +132,7 @@ def Test2():
     for h, line in pmonitor(popens, timeoutms=1000 ):
         if h:
  	    output_3 += line
+            num += 1
  	  
         if time() >= endTime:
             for p in popens.values():
@@ -286,7 +287,7 @@ def Test5():
     popens = {}
 
     popens[leftHost] = leftHost.popen('iperf -s -p 22')
-    popens[rightHost] = rightHost.popen('iperf -c 10.0.0.2 -p 22')
+    popens[rightHost] = rightHost.popen('iperf -c 10.0.0.1 -p 22')
 
     seconds = 20
     endTime = time() + seconds   
@@ -301,8 +302,9 @@ def Test5():
 			p.send_signal( SIGINT )
 
     
-    #print output_4 
+    #print "out:", output_4 
     k = _parseIperf(output_4)
+    #print "k", k
     if k == '':
         print "Test 5 Passed"
     else:
